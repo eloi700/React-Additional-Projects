@@ -1,0 +1,93 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.app-container {
+  height: 550px;
+  width: 550px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.navigationbar {
+  height: 91px;
+  width: 550px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+.logo-title {
+  display: flex;
+}
+
+.course-title {
+  font-size: 16px;
+  line-height: 19.36px;
+}
+
+.logo-name {
+  color: #61dafb;
+  font-size: 22.25px;
+  font-weight: 700;
+  line-height: 26.93px;
+  letter-spacing: -5%;
+  padding-top: 6px;
+}
+
+/* Main Components */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.title {
+  margin: 57px 0 46px;
+  padding-left: 27px;
+}
+
+.main-list {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  list-style: none;
+  width: 450px;
+  padding: 0 86px 0 51px;
+}
+
+ul li {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+ul li::before {
+  content: '\2022';
+  display: inline-block;
+  color: #61dafb;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0 13px 0 0;
+}
+
+.logo-right {
+  position: absolute;
+  top: 50px;
+  left: 300px;
+  width: 500px;
+  fill: #444;
+}
