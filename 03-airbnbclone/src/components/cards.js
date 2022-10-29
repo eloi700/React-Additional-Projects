@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 function Cards({ img, rating, reviewCount, country, title, price }) {
   return (
       <Card className='card_container'>
-        <Card.Img className='image' variant='top' src={img} />
+        <Card.Img className='image' variant='top' src={`../assets/${img}`} />
         <Card.Body className='text'>
           <img className='star' src='../assets/star.png' alt='star' />
           <span>

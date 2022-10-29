@@ -10,7 +10,7 @@ function App() {
       <HeroPage />
       <div className='card_container_all'>
         <Cards
-          img='../assets/katie-zaferes.png'
+          img='katie-zaferes.png'
           rating='5.0'
           reviewCount='(6)'
           country='USA'
@@ -19,7 +19,7 @@ function App() {
         />
 
         <Cards
-          img='../assets/wedding-photography.png'
+          img='wedding-photography.png'
           rating='5.0'
           reviewCount='(30)'
           country='USA'
@@ -28,7 +28,7 @@ function App() {
         />
 
         <Cards
-          img='../assets/mountain-bike.png'
+          img='mountain-bike.png'
           rating='4.8'
           reviewCount='(2)'
           country='USA'
