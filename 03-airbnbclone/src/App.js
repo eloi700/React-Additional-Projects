@@ -2,40 +2,23 @@ import './App.scss';
 import Cards from './components/cards';
 import HeroPage from './components/heropage';
 import Navigationbar from './components/navbar';
+import { data } from './components/airbnbdata';
 
 function App() {
+  const cards = data.map((item) => {
+    return (
+      <Cards
+        key={item.id}
+        item = {item} //OR
+        // {...item} and remove all item in the props.item ...(card.js)
+      />
+    );
+  });
   return (
     <div className='app_container'>
       <Navigationbar />
       <HeroPage />
-      <div className='card_container_all'>
-        <Cards
-          img='katie-zaferes.png'
-          rating='5.0'
-          reviewCount='(6)'
-          country='USA'
-          title='Life lessons with Katie Zaferes'
-          price='$136'
-        />
-
-        <Cards
-          img='wedding-photography.png'
-          rating='5.0'
-          reviewCount='(30)'
-          country='USA'
-          title='Learn wedding photography'
-          price='$125'
-        />
-
-        <Cards
-          img='mountain-bike.png'
-          rating='4.8'
-          reviewCount='(2)'
-          country='USA'
-          title='Group Mountain Biking '
-          price='$50'
-        />
-      </div>
+      <div className='card_container_all'>{cards}</div>
     </div>
   );
 }

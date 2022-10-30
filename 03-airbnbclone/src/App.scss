@@ -73,6 +73,7 @@
 }
 
 .image {
+  position: relative;
   height: 23.5rem;
   width: 17.6rem;
   margin: 0 1.8rem 0 6rem;
@@ -88,4 +89,13 @@
   height: 1.4rem;
   width: 1.4rem;
   margin: -0.4rem 0.3rem 0 0;
+}
+
+.badge{
+  position: absolute;
+  padding: .8rem 1.5rem;
+  margin: 1rem 0 0 7rem;
+  z-index: 3;
+  font-size: 1rem;
+  color: #fff;
 }
