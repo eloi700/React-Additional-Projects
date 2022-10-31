@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,OAAO,CAAC,qEAAI;AAEZ,AAAA,CAAC,EAAE,AAAA,QAAQ,EAAE,AAAA,OAAO,CAAA;EAClB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACvB;;AAED,AAAA,KAAK,CAAA;EACH,SAAS,EAAE,GAAG;EACd,WAAW,EAAE,mBAAmB;CACjC;;AAED,AAAA,IAAI,CAAA;EACF,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,KAAK;CAClB",
     "sources": [
-        "../../04-propspractice/src/index.scss"
+        "../../07-traveljournal/src/styles/index.scss"
     ],
     "names": [],
     "file": "index.css"
