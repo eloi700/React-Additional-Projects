@@ -6,7 +6,6 @@ import { HiLocationMarker } from 'react-icons/hi';
 function MainContent(props) {
   const info = props.item;
   return (
-    // <CardGroup>
       <Card>
         <Card.Img className="image" variant='top' src={info.imageUrl} />
         <Card.Body>
@@ -23,8 +22,6 @@ function MainContent(props) {
           <Card.Text>{info.description}</Card.Text>
         </Card.Body>
       </Card>
-    // </CardGroup>
-
   );
 }
 

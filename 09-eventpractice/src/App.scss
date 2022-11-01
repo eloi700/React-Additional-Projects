@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import 'bootstrap/scss/bootstrap';
+
+$bg-color: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+
+.app_container {
+  height: 55rem;
+  width: 55rem;
+  background: #eee;
+  font-family: 'Poppins', sans-serif;
+}
+
+.image{
+  height: 30rem;
+  width: 100%;
+
+  &:hover{
+    filter: opacity(.5);
+  }
+}
+
+.click_button{
+  padding: 1.5rem;
+  margin-top: 2rem;
+  background: #8f8f8f;
+  font-size: 1.5rem;
+  color: #fff;
+  border: .1rem solid #8f8f8f;
+  border-radius: 1rem;
+}

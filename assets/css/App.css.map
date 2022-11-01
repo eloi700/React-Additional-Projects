@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../../07-traveljournal/src/styles/App.scss"
+        "../../09-eventpractice/src/App.scss"
     ],
     "names": [],
     "file": "App.css"

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import 'bootstrap/scss/bootstrap';
+
+$bg-color: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+
+.app_container {
+  height: 55rem;
+  width: 55rem;
+  background: #eee;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6.5rem;
+  color: #fff;
+  background: $bg-color;
+}
+
+.meme_icon{
+  height: 70%;
+  margin-left: 1.5rem;
+}
+
+.header_title{
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+
+.header_side--text{
+  margin: auto;
+  font-size: 1.3rem;
+}
+
+// Form
+.input_text-1, .input_text-2{
+  padding: 1rem;
+  margin: auto;
+
+  &::placeholder{
+    font-size: 1.2rem;
+  }
+}
+
+.form_button{
+  padding: 1rem;
+  background: $bg-color;
+  color: #fff;
+  font-size: 1.5rem;
+
+  &:hover, &:active{
+    color: #fff;
+  }
+}

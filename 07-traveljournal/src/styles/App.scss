@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
 @import 'bootstrap/scss/bootstrap';
 
 .app_container {
   height: 70rem;
   width: 55rem;
   background: #eee;
+  font-family: 'Fasthand', cursive;
 }
 
 .navbar {
@@ -51,18 +53,19 @@
 
 .card-body{
   width: 33.5rem;
-  margin-top: 1rem;
 }
 
 .location--marker{
   color: #ff6347;
   font-size: 1rem;
+
 }
 
 .location--link{
   letter-spacing: normal;
   text-transform: capitalize;
   padding-left: 1rem;
+
 
   & a{
     color: #808080;
@@ -72,16 +75,18 @@
 .card-title{
   font-size: 2.5rem;
   font-weight: 600;
+
 }
 
 .location{
   text-transform: uppercase;
   letter-spacing: .2rem;
-  color: gray;
+  color: #808080;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .dates, .card-text{
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .dates{
