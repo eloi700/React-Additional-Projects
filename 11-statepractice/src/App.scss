@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import 'bootstrap/scss/bootstrap';
+
+$bg-color: linear-gradient(90deg, #802259 1.18%, #d3269f 100%);
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_container {
+  @include center;
+  align-items: flex-start;
+  height: 80rem;
+  width: 55rem;
+  background: $bg-color;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.state,
+.state_going {
+  @include center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.state--title,
+.state_going-title {
+  font-size: 3rem;
+  text-align: center;
+
+  &:focus, &:active{
+    user-select: none;
+  }
+}
+
+
+
+.state--value,
+.state_going-value {
+  @include center;
+  flex-direction: column;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #802259;
+  font-weight: 500;
+}
+
+.state--counter {
+  @include center;
+  gap: 4rem;
+  margin-top: -4.5rem;
+}
+
+.decrement,
+.increment {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 2rem;
+  font-weight: 500;
+  background: #5f0644;
+  color: #fff;
+}
+
+.dec_inc--number {
+  font-size: 3rem;
+  color: #000;
+}

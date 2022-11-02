@@ -1,17 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { memeData } from './memeData';
+import {memeData} from '../memeData';
 
 export default function MemeForm() {
-  // const data = props.data;
 
-  let url;
-  
+  const [memeImage, setMemeImage] = useState('');
+
   function getMemeImage() {
-    const memeArray = memeData.data.memes
-    const randomNumber = Math.floor(Math.random() * memeArray.length);
-    url = memeArray[randomNumber].url
+    const memesArray = memeData.data.memes; //data
+    const randomNumber = Math.floor(Math.random() * memesArray.length); //random
+    setMemeImage(memesArray[randomNumber].url);
+      // new Url from memesArray with an index of randomNumber
   }
 
   return (
@@ -38,6 +38,7 @@ export default function MemeForm() {
           Get a new meme image 🖼️
         </Button>
       </div>
+      <img className="meme_image"src={memeImage} alt=""/>
     </div>
   );
 }

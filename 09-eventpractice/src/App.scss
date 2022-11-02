@@ -11,7 +11,7 @@ $bg-color: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
 }
 
 .image{
-  height: 30rem;
+  height: 20rem;
   width: 100%;
 
   &:hover{
@@ -19,12 +19,16 @@ $bg-color: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
   }
 }
 
-.click_button{
-  padding: 1.5rem;
+.click_button, .add_item_button{
+  padding: 1rem;
   margin-top: 2rem;
   background: #8f8f8f;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #fff;
   border: .1rem solid #8f8f8f;
   border-radius: 1rem;
+}
+
+.add_item_button{
+  background: rgb(28, 155, 28);
 }
