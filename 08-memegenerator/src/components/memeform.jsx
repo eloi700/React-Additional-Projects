@@ -18,6 +18,9 @@ export default function MemeForm() {
     const memesArray = allMemeImages.data.memes; //data
     const randomNumber = Math.floor(Math.random() * memesArray.length); //random
     const url = memesArray[randomNumber].url
+    // const name = memesArray[randomNumber].name
+    // console.log(name);
+
     setMeme(prevMeme =>({
      ...prevMeme,
       randomImage: url //OR
