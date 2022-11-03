@@ -20,6 +20,15 @@ $bg-color: linear-gradient(90deg, #802259 1.18%, #d3269f 100%);
   font-family: 'Poppins', sans-serif;
 }
 
+.app_passing_data--container{
+  @extend .app_container;
+  flex-direction: column;
+}
+
+.body_greeting{
+  text-align: center;
+}
+
 .state,
 .state_going {
   @include center;

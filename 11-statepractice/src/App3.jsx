@@ -17,6 +17,8 @@ export default function App() {
     setIncdec((prevNum) => (prevNum = 0));
   }
 
+  console.log('App component rendered');
+
   return (
     <div className='app_container'>
       <div className='state'>
@@ -24,7 +26,10 @@ export default function App() {
 
         {/* PASSING STATE AS PROPS */}
         {/* <h1 className='dec_inc--number counter'>{incdec}</h1> */}
+
         <Count number={incdec} />
+
+        {/* NOTE: Count doesn't depend on the above state component */}
 
         <div className='state--counter'>
           <button className='decrement' onClick={decrement}>

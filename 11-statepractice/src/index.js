@@ -4,7 +4,8 @@ import './index.scss';
 // import App from './App';
 // import App from './App1';
 // import App from './App2';
-import App from './App3';
+// import App from './App3';
+import App from './passingdata/App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

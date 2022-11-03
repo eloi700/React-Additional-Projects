@@ -1,29 +1,28 @@
-import React, {useState} from 'react';
-import image from './assets/janesmith.png'
-import './App.scss'
+import React, { useState } from 'react';
+import image from './assets/janesmith.png';
+import Star from './star';
+import './App.scss';
 
 function App() {
-
   const [contact, setContact] = useState({
-    firstName: "Jane",
-    lastName: "Smith",
-    phone: "+993 4 8518197",
-    email: "janesmith@example.com",
-    isLike: false
-  })
+    firstName: 'Jane',
+    lastName: 'Smith',
+    phone: '+993 4 8518197',
+    email: 'janesmith@example.com',
+    isLike: false,
+  });
 
-  let likeIcon = contact.isLike ? '★' : '✩';
-
-  function toggleLike(){
+  function toggleLike() {
     setContact((prevContact) => {
       return {
-        ...prevContact, isLike: !prevContact.isLike
-      }
-    })
+        ...prevContact,
+        isLike: !prevContact.isLike,
+      };
+    });
   }
 
-    return (
-        <main className='app_container'>
+  return (
+    <main className='app_container'>
       <article className='card_container'>
         <img
           className='card_image'
@@ -31,9 +30,15 @@ function App() {
           alt='janesmith'
           style={{ height: '15rem', width: '15rem' }}
         />
-        <div className='card_favorite-star' onClick={toggleLike}>
+
+        {/* <div className='card_favorite-star' onClick={toggleLike}>
           {likeIcon}
+        </div> */}
+
+        <div className='card_favorite-star'>
+          <Star isFilled={contact.isLike} handleClick={toggleLike}/>
         </div>
+
         <h2 className='card_name'>
           {contact.firstName} {contact.lastName}
         </h2>
@@ -41,7 +46,7 @@ function App() {
         <p className='card_email contact'>{contact.email}</p>
       </article>
     </main>
-     );
+  );
 }
 
 export default App;

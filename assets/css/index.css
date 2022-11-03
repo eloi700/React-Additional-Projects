@@ -6,7 +6,7 @@
 }
 
 :root {
-  font-size: 65%;
+  --font: 65%;
 }
 
 body {
@@ -20,5 +20,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
+  font-size: var(--font);
 }
 /*# sourceMappingURL=index.css.map */
