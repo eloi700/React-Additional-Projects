@@ -5,12 +5,24 @@ import {memeData} from '../memeData';
 
 export default function MemeForm() {
 
-  const [memeImage, setMemeImage] = useState('');
+  // const [memeImage, setMemeImage] = useState('https://i.imgflip.com/1bij.jpg');
+  const [meme, setMeme] = useState({
+    topText: "",
+    bottomText: "",
+    randomImage: "https://i.imgflip.com/1bij.jpg"
+  })
+
+  const [allMemeImages, setAllMemeImages] = useState(memeData)
 
   function getMemeImage() {
-    const memesArray = memeData.data.memes; //data
+    const memesArray = allMemeImages.data.memes; //data
     const randomNumber = Math.floor(Math.random() * memesArray.length); //random
-    setMemeImage(memesArray[randomNumber].url);
+    const url = memesArray[randomNumber].url
+    setMeme(prevMeme =>({
+     ...prevMeme,
+      randomImage: url //OR
+      // randomImage: memesArray[randomNumber].url
+    }));
       // new Url from memesArray with an index of randomNumber
   }
 
@@ -38,7 +50,7 @@ export default function MemeForm() {
           Get a new meme image 🖼️
         </Button>
       </div>
-      <img className="meme_image"src={memeImage} alt=""/>
+      <img className="meme_image" src={meme.randomImage} alt=""/>
     </div>
   );
 }

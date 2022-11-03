@@ -30,5 +30,12 @@ $bg-color: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
 }
 
 .add_item_button{
-  background: rgb(28, 155, 28);
+  border: .2rem solid rgb(28, 155, 28);
+  background: none;
+  color: #222
+}
+
+.item-added{
+  margin: 2rem 0 0 3rem;
+  font-size: 1.3rem;
 }

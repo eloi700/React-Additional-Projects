@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.scss';
 
-function App() {
+export default function App() {
   const [important, setImportant] = useState('Yes');
   const [incdec, setIncdec] = useState(0);
   const [isGoingOut, setIsGoingOut] = useState(true);
@@ -12,19 +12,23 @@ function App() {
   let impState = important ? 'Yes' : 'No';
 
   function goingOutClick() {
-    setIsGoingOut(prevAnswer => !prevAnswer);
+    setIsGoingOut((prevAnswer) => !prevAnswer);
   }
 
   function handleClick() {
-    setImportant(prevState => !prevState);
+    setImportant((prevState) => !prevState);
   }
 
   function increment() {
-    setIncdec((prevCount) => prevCount + 1);
+    setIncdec((prevNum) => prevNum + 1);
   }
 
   function decrement() {
-    setIncdec((prevCount) => prevCount - 1);
+    setIncdec((prevNum) => (prevNum !== 0 ? prevNum - 1 : 0));
+  }
+
+  function resetClick(){
+    setIncdec(prevNum => prevNum = 0)
   }
 
   return (
@@ -43,13 +47,16 @@ function App() {
             +
           </button>
         </div>
+        <div className="reset_button">
+          <button className="reset" onClick={resetClick}>Reset</button>
+        </div>
       </div>
 
       {/* IS GOING OUT - TERNARY OPERATOR */}
       <div className='state_going'>
         <h1 className='state_going-title'>Do I feel like going out?</h1>
         <div className='state_going-value' onClick={goingOutClick}>
-          <h1>{isGoingOut ? "Yes" : "No"}</h1>
+          <h1>{isGoingOut ? 'Yes' : 'No'}</h1>
           {/* <h1>{answer}</h1> */}
         </div>
       </div>
@@ -57,10 +64,8 @@ function App() {
   );
 }
 
-export default App;
-
-/**
-CHANGING STATE QUIZ:
+/*
+ CHANGING STATE QUIZ:
 1)  YOU HAVE 2 OPTIONS FOR WHAT YOU CAN PASS INTO A STATE SETTER FUNCTION (e.g. `setCount`). WHAT ARE THEY?
     a.) New Value of State (setCount(5))
     b.) Callback Function - whatever the callback function returns === new value of state.
@@ -70,5 +75,4 @@ CHANGING STATE QUIZ:
 
 
 3)  WHEN WOULD YOU WANT TO PASS SECOND OPTION (FROM ANSWER ABOVE) TO THE STATE SETTER FUNCTION?
-    Whenever you DO need the previous value to determine the new value.
- */
+    Whenever you DO need the previous value to determine the new value. */
