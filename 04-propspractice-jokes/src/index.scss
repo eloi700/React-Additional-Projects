@@ -1,5 +1,5 @@
 @import 'bootstrap/scss/bootstrap';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
 *,
 ::before,
@@ -11,7 +11,7 @@
 
 :root{
   font-size: 65%;
-  font-family: 'Poppins', sans-serif;
+  --fontfamily: 'Poiret One', cursive;
 }
 
 body {
