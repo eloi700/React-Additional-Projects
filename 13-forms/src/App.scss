@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 @import 'bootstrap/scss/bootstrap';
 
-$bg-color: linear-gradient( 135deg, #FCCF31 10%, #F55555 100%);
+$bg-color: linear-gradient(135deg, #fccf31 10%, #f55555 100%);
 
 @mixin center {
   display: flex;
@@ -11,18 +11,54 @@ $bg-color: linear-gradient( 135deg, #FCCF31 10%, #F55555 100%);
 
 .app_container {
   @include center;
-  align-items: flex-start;
-  height: 40rem;
-  width: 30rem;
+  height: 60rem;
+  width: 40rem;
   background: $bg-color;
   color: #fff;
-  font-family: var(--fontFamily)
+  font-family: var(--fontFamily);
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
-  gap: 1rem;
-  color: #F55555;
+  gap: 0.5rem;
+  color: #f55555;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+
+  &::placeholder {
+    padding: 0.5rem;
+  }
+}
+
+textarea::placeholder {
+  padding: 0.5rem;
+  color: #777;
+}
+
+input[type='checkbox'] {
+  padding: 0.5rem;
+}
+
+label {
+  color: #fff;
+  padding-left: 1rem;
+}
+
+fieldset {
+  background-color: #474747;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: .5rem;
+
+  & legend {
+    font-size: 1.3rem;
+  }
 }
