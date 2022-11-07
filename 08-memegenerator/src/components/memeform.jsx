@@ -1,32 +1,42 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import {memeData} from '../memeData';
+import { memeData } from '../memeData';
 
 export default function MemeForm() {
-
   // const [memeImage, setMemeImage] = useState('https://i.imgflip.com/1bij.jpg');
   const [meme, setMeme] = useState({
-    topText: "",
-    bottomText: "",
-    randomImage: "https://i.imgflip.com/1bij.jpg"
-  })
+    topText: '',
+    bottomText: '',
+    randomImage: 'https://i.imgflip.com/1bij.jpg',
+  });
 
-  const [allMemeImages, setAllMemeImages] = useState(memeData)
+// --------------TOP & BOTTOM  TEXT------------------------
+  function handleChange(e) {
+    const {name, value} = e.target;
+    e.preventDefault();
+    setMeme((prevText) => ({
+      ...prevText,
+      [name]: value // topText: e.target.value
+    }));
+  }
 
+  const [allMemeImages, setAllMemeImages] = useState(memeData);
+
+// --------------RAMDOM IMAGE------------------------
   function getMemeImage() {
     const memesArray = allMemeImages.data.memes; //data
     const randomNumber = Math.floor(Math.random() * memesArray.length); //random
-    const url = memesArray[randomNumber].url
+    const url = memesArray[randomNumber].url;
     // const name = memesArray[randomNumber].name
     // console.log(name);
 
-    setMeme(prevMeme =>({
-     ...prevMeme,
-      randomImage: url //OR
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      randomImage: url, //OR
       // randomImage: memesArray[randomNumber].url
     }));
-      // new Url from memesArray with an index of randomNumber
+    // new Url from memesArray with an index of randomNumber
   }
 
   return (
@@ -36,11 +46,17 @@ export default function MemeForm() {
           className='input_text-1'
           type='text'
           placeholder='Top Text'
+          name='topText'
+          value={meme.topText}
+          onChange={handleChange}
         />
         <Form.Control
           className='input_text-2'
           type='text'
           placeholder='Bottom Text'
+          name='bottomText'
+          value={meme.bottomText}
+          onChange={handleChange}
         />
       </Form>
       <div className='d-grid'>
@@ -53,7 +69,11 @@ export default function MemeForm() {
           Get a new meme image 🖼️
         </Button>
       </div>
-      <img className="meme_image" src={meme.randomImage} alt=""/>
+      <div className='meme'>
+        <img className='meme_image' src={meme.randomImage} alt='' />
+        <h2 className='meme_text top'>{meme.topText}</h2>
+        <h2 className='meme_text bottom'>{meme.bottomText}</h2>
+      </div>
     </div>
   );
 }

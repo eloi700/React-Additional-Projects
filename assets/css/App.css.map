@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../../12-boxeschallenge/src/App.scss"
+        "../../API Calls/apilessons/src/App.scss"
     ],
     "names": [],
     "file": "App.css"

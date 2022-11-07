@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import 'bootstrap/scss/bootstrap';
+
+$bg-color:  linear-gradient( 135deg, #FD6E6A 10%, #FFC600 100%);
+
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_container {
+  @include center;
+  align-items: center;
+  height: 40rem;
+  width: 40rem;
+  background: $bg-color;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
