@@ -3,7 +3,6 @@
 
 $bg-color:  linear-gradient( 135deg, #FD6E6A 10%, #FFC600 100%);
 
-
 @mixin center {
   display: flex;
   justify-content: center;
@@ -13,9 +12,21 @@ $bg-color:  linear-gradient( 135deg, #FD6E6A 10%, #FFC600 100%);
 .app_container {
   @include center;
   align-items: center;
+  flex-direction: column;
   height: 40rem;
   width: 40rem;
   background: $bg-color;
   color: #fff;
   font-family: 'Poppins', sans-serif;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
 }
