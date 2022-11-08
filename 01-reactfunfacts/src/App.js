@@ -1,14 +1,23 @@
-import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState } from 'react';
 import Main from './components/main';
 import NavigationBar from './components/navbar';
-import './style.css'
+import './style.scss';
 
 function App() {
+  const [checked, setChecked] = useState(true);
+  const [label, setLabel] = useState("Dark 🌙")
+
+  function toggleMode(e) {
+    e.stopPropagation()
+    const {checked} = e.target
+    setChecked((prevMode) => !prevMode);
+    setLabel(() => checked ? "Dark 🌙" : "Light ☀")
+  }
+
   return (
     <div className='app-container'>
-      <NavigationBar/>
-      <Main/>
+      <NavigationBar checked={checked} label={label} toggleMode={toggleMode} />
+      <Main checked={checked} />
     </div>
   );
 }

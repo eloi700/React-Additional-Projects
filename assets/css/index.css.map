@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "AAAA,AAAA,CAAC,EAAE,AAAA,QAAQ,EAAE,AAAA,OAAO,CAAA;EAClB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACvB;;AAED,AAAA,KAAK,CAAA;EACH,MAAM,EAAE,GAAG;CACZ;;AAED,AAAA,IAAI,CAAA;EACF,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,KAAK;EACjB,SAAS,EAAE,WAAW;CACvB",
     "sources": [
-        "../../API Calls/apilessons/src/index.scss"
+        "../../14-API Calls/API/src/index.scss"
     ],
     "names": [],
     "file": "index.css"

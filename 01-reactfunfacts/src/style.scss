@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import 'bootstrap/scss/bootstrap';
+
+.app-container {
+  height: 550px;
+  width: 550px;
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+.navigationbar.nav-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 550px;
+  background: rgb(10, 32, 39);
+}
+
+.navigationbar.nav-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 550px;
+  background: #fafafa;
+  box-shadow: 0 0 .5rem #aaa;
+
+  & > .container > .mode > .input-label{
+    background: #fafafa;
+    color: #313131;
+    transform: rotateY(360deg);
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 .3rem rgba(0, 0, 0, 0.3);
+  }
+}
+
+.logo {
+  height: 5rem;
+  width: 5rem;
+}
+
+.logo-title {
+  display: flex;
+}
+
+.logo-name {
+  color: #61dafb;
+  font-size: 22.25px;
+  font-weight: 700;
+  line-height: 26.93px;
+  letter-spacing: -5%;
+  margin-top: 1.5rem;
+}
+
+.mode {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-button {
+  display: none;
+}
+
+.input-label {
+  color: #61dafb;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: #000;
+  text-align: center;
+  padding-top: .6rem;
+  border: 0.2rem solid rgba(133, 133, 133, 0.37);
+  box-shadow: 0.2rem 0.1rem 1rem rgba(77, 255, 240, 0.8);
+  backface-visibility: hidden;
+  transform: rotateX(0);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+/* Main Components */
+
+.main-dark {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 3rem 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.8);
+
+}
+
+.main-light {
+  @extend .main-dark;
+    background: #fafafa;
+    color: #000;
+    box-shadow: 0 0 .5rem #aaa;
+
+    & .main-row svg.logo-right{
+      fill: #eee;
+    }
+  }
+
+.main-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.title {
+  margin: 3rem 0 3rem 0;
+  font-size: 2rem;
+  padding-left: 27px;
+}
+
+.main-list {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  list-style: none;
+  width: 450px;
+  padding: 0 86px 0 51px;
+}
+
+ul li {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+ul li::before {
+  content: '\2022';
+  display: inline-block;
+  color: #61dafb;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0 13px 0 0;
+}
+
+.logo-right {
+  width: 35rem;
+  margin-left: 13.3rem;
+  margin-top: -20rem;
+  fill: #444;
+}
