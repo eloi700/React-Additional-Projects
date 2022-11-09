@@ -9,9 +9,9 @@ function App() {
 
   function toggleMode(e) {
     e.stopPropagation()
-    const {checked} = e.target
+    // const {checked} = e.target
     setChecked((prevMode) => !prevMode);
-    setLabel(() => checked ? "Dark 🌙" : "Light ☀")
+    setLabel((prevLabel) => prevLabel = "Light ☀")
   }
 
   return (
