@@ -1,0 +1,11 @@
+** CLASSES *****************************************************************
+
+Class in JavaScript is a BLUEPRINT for creating objects that have the same properties and access to the same methods.
+
+What is Class Basics?
+- Syntactic sugar on top of setting up prototype chains manually
+- Class field to initialize object properties (same for every object.)
+- constructor() method to initialize dynamic object properties
+- You can "extend" from one class to another to access the goodness from parent class
+
+Function Component into Class Component -----------------------------------

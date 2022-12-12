@@ -1,0 +1,29 @@
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --font: 65%;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: var(--font);
+  background: magenta;
+}
+
+h1{
+  font-size: 5rem;
+  color: #fef;
+}
+
+p{
+  font-style: italic;
+  font-size: 4rem;
+  color: #fff;
+}
